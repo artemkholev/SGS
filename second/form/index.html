@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Form</title>
+</head>
+<body>
+  <div>
+    <h1>Форма с использованием Html + JavaScript</h1>
+    <form style="width: 300px; padding: 10px; border: 1px solid black; display: flex; margin: 0 auto;  flex-direction: column;" id="myForm">
+      <div>
+        <label for="city">Город:</label>
+        <select id="city" onchange="updateWorkshops()">
+          <option></option>
+          <option value="city 1">Нижний Новгород</option>
+          <option value="city 2">Москва</option>
+        </select>
+      </div>
+      <br>
+
+      <div>
+        <label for="workshop">Цех:</label>
+        <select id="workshop" onchange="updateEmployees()"></select>
+      </div>
+      <br>
+
+      <div>
+        <label for="employee">Сотрудник:</label>
+        <select id="employee" onchange="updateTeam()"></select>
+      </div>
+      <br>
+
+      <div>
+        <label for="team">Бригада:</label>
+        <select id="team"></select>
+      </div>
+      <br>
+
+      <div>
+        <label for="workingShift">Смена:</label>
+        <select id="workingShift">
+          <option value="shift1">Смена 1</option>
+          <option value="shift2">Смена 2</option>
+          <option value="shift3">Смена 2</option>
+        </select>
+      </div>
+      <br>
+
+      <button type="button" onclick="saveToCookie()">Сохранить в Cookie</button>
+    </form>
+  </div>
+  <script src="./saveToCookie.js"></script>
+</body>
+</html>
